@@ -28,7 +28,7 @@
             "name": "I visit the TODO homepage",
             "result": {
               "status": "passed",
-              "duration": 1901000000
+              "duration": 1052000000
             }
           }
         ]

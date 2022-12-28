@@ -1,0 +1,8 @@
+{
+    "carouselImages":{
+        "carouselImageSamsung": "Samsung1.jpg",
+        "carouselImageLaptops" : "iphone1.jpg",
+        "carouselImageNexus" : "nexus1.jpg"
+    }
+    
+}

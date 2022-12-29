@@ -20,7 +20,7 @@ Then("I should see laptops carousel image", () => {
 });
 
 When("I click on the carousel forward arrow", () => {
-  home.clickForwardArrowButton;
+  home.clickForwardArrowButton();
 });
 
 Then("I should see samsung nexus image", () => {

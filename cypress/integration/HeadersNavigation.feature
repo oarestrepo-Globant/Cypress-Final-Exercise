@@ -6,7 +6,7 @@ Feature: Headers links navigation
     Background:
         Given I am in the home page
 
-    Scenario: Validate contact link is working
+    Scenario: Validate Contact link is working
         When I click on "Contact" link
         Then I should see a popup with title "New message"
 
@@ -25,3 +25,7 @@ Feature: Headers links navigation
      Scenario: Validate Home link is working
         When I click on "Home" link
         Then I should see home page
+    
+    Scenario: Validate Cart link is working
+        When I click on "Cart" link
+        Then I should see cart page

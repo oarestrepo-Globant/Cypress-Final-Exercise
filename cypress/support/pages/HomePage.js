@@ -121,9 +121,7 @@ class HomePage {
     return this.getCategoriesLink().click();
   }
 
-  checkProductsCardsListLength(amountExpected) {
-    return this.getProductsCardsList().should("have.length", amountExpected);
-  }
+  
 
   clickOnPhonesLink() {
     return this.getPhonesLink().click();
@@ -148,6 +146,7 @@ class HomePage {
     return this.getRandomProductLink().click();
   }
 
-  
+  ///API
+
 }
 export default HomePage;

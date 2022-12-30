@@ -9,6 +9,15 @@ const pageLocators = {
   //test2
   //navbarExample: "#navbarExample",
   headersLinks: ".nav-item",
+
+  //test#3
+  categoriesLink: "#cat",
+  productsCardsList: "#tbodyid > div",
+  //linkFromCategoriesSection: "#itemc",
+  phonesLink: ".list-group :nth-child(2)",
+  monitorsLink: ".list-group :nth-child(3)",
+  laptopsLink: ".list-group :nth-child(4)",
+  randomProductLink: "#tbodyid > div:nth-of-type(1) .hrefch",
 };
 
 class HomePage {
@@ -36,9 +45,41 @@ class HomePage {
   getHeadersLinks(option) {
     return cy.get(pageLocators.headersLinks).contains(option);
   }
+
+  getCategoriesLink() {
+    return cy.get(pageLocators.categoriesLink);
+  }
+
+  getProductsCardsList() {
+    return cy.get(pageLocators.productsCardsList);
+  }
+
+  getPhonesSectionLink() {
+    return cy.get(pageLocators.phonesSectionLink);
+  }
+
+  getPhonesLink() {
+    return cy.get(pageLocators.phonesLink);
+  }
+
+  getMonitorsLink() {
+    return cy.get(pageLocators.monitorsLink);
+  }
+
+  getLaptopsLink() {
+    return cy.get(pageLocators.laptopsLink);
+  }
+
+  getRandomProductLink() {
+    let min = Math.ceil(1);
+    let max = Math.floor(9);
+
+    const index = Math.floor(Math.random() * (max - min + 1) + min);
+    return cy.get(`#tbodyid > div:nth-of-type(${index}) .hrefch`);
+  }
+
   /////////////////////////////////////////////////////////////////////////
 
-  //Implementar web service
   carouselItemsContainer() {
     return cy.get(".carousel-inner").should("be.visible");
     // return this.carouselItemsContainer().should('be.visible');
@@ -75,5 +116,38 @@ class HomePage {
   checkHomePageIsDisplayed() {
     return this.carouselItemsContainer().should("be.visible");
   }
+
+  clickOnCategoriesLink() {
+    return this.getCategoriesLink().click();
+  }
+
+  checkProductsCardsListLength(amountExpected) {
+    return this.getProductsCardsList().should("have.length", amountExpected);
+  }
+
+  clickOnPhonesLink() {
+    return this.getPhonesLink().click();
+  }
+
+  checkProductsCardsListLength(amountExpected) {
+    return this.getProductsCardsList().should(
+      "have.length.at.least",
+      amountExpected
+    );
+  }
+
+  clickOnMonitorsLink() {
+    return this.getMonitorsLink.click();
+  }
+
+  clickOnLaptopsLink() {
+    return this.getLaptopsLink().click();
+  }
+
+  clickOnRandomProductLink() {
+    return this.getRandomProductLink().click();
+  }
+
+  
 }
 export default HomePage;

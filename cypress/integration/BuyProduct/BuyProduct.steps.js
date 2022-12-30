@@ -17,8 +17,12 @@ When("I click on Categories link", () => {
   home.clickOnCategoriesLink();
 });
 
-Then("I should see a list of {int} products", (amount) => {
-  home.checkProductsCardsListLength(amount);
+Then("I should see a list of {int} products through API response", (productsAmount) => {
+  home.checkProductsCardsListLength(productsAmount)
+});
+
+Then("I should see a list of minimun {int} product", (productsAmount) => {
+  home.checkAtLeastOneProductIsDisplayed(productsAmount)
 });
 
 When("I click on Phones link", () => {
@@ -72,18 +76,18 @@ Given("I am in the cart page with products on it", () => {
   flow.addingProductToCart();
 });
 
-When("I click place order button", ()=>{
+When("I click place order button", () => {
   cart.clickPlaceOrderButton();
-})
+});
 
-Then("I should see the purchase form", ()=>{
+Then("I should see the purchase form", () => {
   cart.checkModalIsPresent();
-})
+});
 
-But("I submit the form correctly",()=>{
+But("I submit the form correctly", () => {
   cart.fillThePurchaseForm();
-})
+});
 
-Then("I should see home page", ()=>{
+Then("I should see home page", () => {
   home.checkHomePageIsDisplayed();
-})
+});

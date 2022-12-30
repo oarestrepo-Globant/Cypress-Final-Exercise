@@ -1,10 +1,6 @@
-import './commands'
-import '@shelex/cypress-allure-plugin';
+import "./commands";
+import "@shelex/cypress-allure-plugin";
 
-Cypress.on('uncaught:exception', (err, runnable) => {
-  return false
-})
-
-
-// npx cypress run --env allure=true
-// allure serve allure-results/
+Cypress.on("uncaught:exception", (err, runnable) => {
+  return false;
+});

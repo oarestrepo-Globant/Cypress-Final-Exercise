@@ -1,20 +1,15 @@
 //page locators
 import endPoints from "../../fixtures/endPoints.json";
 const pageLocators = {
-  //test1
   carouselItemsContainer: ".carousel-inner",
   carouselActiveItem: ".carousel-item.active",
   backArrowButton: ".carousel-control-prev-icon",
   forwardArrowButton: ".carousel-control-next-icon",
 
-  //test2
-  //navbarExample: "#navbarExample",
   headersLinks: ".nav-item",
 
-  //test#3
   categoriesLink: "#cat",
   productsCardsList: "#tbodyid > div",
-  //linkFromCategoriesSection: "#itemc",
   phonesLink: ".list-group :nth-child(2)",
   monitorsLink: ".list-group :nth-child(3)",
   laptopsLink: ".list-group :nth-child(4)",
@@ -22,7 +17,6 @@ const pageLocators = {
 };
 
 class HomePage {
-  /// instanciar Web Elements
   carouselItemsContainer() {
     return cy.wrap(pageLocators.carouselItemsContainer);
   }
@@ -79,11 +73,8 @@ class HomePage {
     return cy.get(`#tbodyid > div:nth-of-type(${index}) .hrefch`);
   }
 
-  /////////////////////////////////////////////////////////////////////////
-
   carouselItemsContainer() {
     return cy.get(".carousel-inner").should("be.visible");
-    // return this.carouselItemsContainer().should('be.visible');
   }
 
   clickBackArrowButton() {
@@ -138,7 +129,6 @@ class HomePage {
     return this.getRandomProductLink().click();
   }
 
-  ///API
   checkProductsCardsListLength(productsAmountDisplayed) {
     return cy
       .request(endPoints.entries)

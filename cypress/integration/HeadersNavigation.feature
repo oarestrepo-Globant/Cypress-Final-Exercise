@@ -11,7 +11,7 @@ Feature: Headers links navigation
         When I click on "Contact" link
         Then I should see a popup with title "New message"
 
-    @headersLinks @aboutUsLink @regression 
+    @headersLinks @aboutUsLink @regression
     Scenario: Validate About Us link is working
         When I click on "About us" link
         Then I should see a popup with title "About us"

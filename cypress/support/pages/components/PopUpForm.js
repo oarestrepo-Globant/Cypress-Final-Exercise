@@ -12,14 +12,12 @@ class PopUpForm {
     return cy.get(pageLocators.modalTitle);
   }
 
-  /////////
-
   checkModalIsPresent() {
     return this.getModalContainer().should("be.visible");
   }
 
   checkContactTitlePopUpIsDisplayed(text) {
-    return this.getModalTitle(text).should('contain', text);
+    return this.getModalTitle(text).should("contain", text);
   }
 }
 export default PopUpForm;

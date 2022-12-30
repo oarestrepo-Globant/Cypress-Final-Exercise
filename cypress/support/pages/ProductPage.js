@@ -27,8 +27,6 @@ class ProductPage {
     return cy.get(pageLocators.cartLinkButton);
   }
 
-  //////////////////////
-
   checkProductTitleIsDiplayed() {
     return this.getProductTitle().should("have.length.at.least", 1);
   }
@@ -36,10 +34,6 @@ class ProductPage {
   checkPriceIsDisplayed() {
     return this.getPrice().should("have.length.at.least", 1);
   }
-
-  //   checkAddCartButtonIsDisplayed() {
-  //     return this.getAddToCartButton().should("be.visible");
-  //   }
 
   clickOnAddToCartButton() {
     return this.getAddToCartButton().click();

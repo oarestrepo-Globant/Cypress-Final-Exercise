@@ -1,4 +1,3 @@
-
 Feature: Headers links navigation
     As an user
     I want to navigate through the different headers links

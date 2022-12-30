@@ -4,7 +4,6 @@
     "TAGS": "not @ignore"
   },
   "testFiles": "**/*.feature",
-  "reporter": "cypress-multi-reporters",
   "reporterOptions": {
     "reporterEnabled": "mochawesome",
     "mochawesomeReporterOptions": {

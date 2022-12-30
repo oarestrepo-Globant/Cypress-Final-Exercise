@@ -1,4 +1,3 @@
-
 Feature: Carousel Navigation
     As an user
     I want to see the product carousel, and navigate with the back and forward buttons

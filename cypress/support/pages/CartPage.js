@@ -81,7 +81,6 @@ class CartPage {
   getOkPurchaseButton() {
     return cy.get(pageLocators.okPurchaseButton);
   }
-  /////////////////////////
 
   checkCartPageTitleIsDisplayed() {
     return this.getCartPageTitle()

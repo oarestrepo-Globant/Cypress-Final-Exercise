@@ -4,12 +4,11 @@ import ProductPage from "../../support/pages/ProductPage";
 
 const home = new HomePage();
 const product = new ProductPage();
-const cart = new CartPage();
 
-class FlowsPage{
-    addingProductToCart() {
-        home.clickOnRandomProductLink();
-        product.clickOnAddToCartButton();
-      }
+class FlowsPage {
+  addingProductToCart() {
+    home.clickOnRandomProductLink();
+    product.clickOnAddToCartButton();
+  }
 }
 export default FlowsPage;

@@ -1,3 +1,4 @@
+
 Feature: Buy products process
     As an user
     I want to be able to choose the products I like

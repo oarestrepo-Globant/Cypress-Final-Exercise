@@ -17,8 +17,12 @@ When("I click on Categories link", () => {
   home.clickOnCategoriesLink();
 });
 
-Then("I should see a list of {int} products", (amount) => {
-  home.checkProductsCardsListLength(amount);
+Then("I should see a list of {int} products through API response", (productsAmount) => {
+  home.checkProductsCardsListLength(productsAmount)
+});
+
+Then("I should see a list of minimun {int} product", (productsAmount) => {
+  home.checkAtLeastOneProductIsDisplayed(productsAmount)
 });
 
 When("I click on Phones link", () => {

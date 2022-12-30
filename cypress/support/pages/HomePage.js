@@ -1,4 +1,5 @@
 //page locators
+import endPoints from "../../fixtures/endPoints.json";
 const pageLocators = {
   //test1
   carouselItemsContainer: ".carousel-inner",
@@ -121,17 +122,8 @@ class HomePage {
     return this.getCategoriesLink().click();
   }
 
-  
-
   clickOnPhonesLink() {
     return this.getPhonesLink().click();
-  }
-
-  checkProductsCardsListLength(amountExpected) {
-    return this.getProductsCardsList().should(
-      "have.length.at.least",
-      amountExpected
-    );
   }
 
   clickOnMonitorsLink() {
@@ -147,6 +139,24 @@ class HomePage {
   }
 
   ///API
+  checkProductsCardsListLength(productsAmountDisplayed) {
+    return cy
+      .request(endPoints.entries)
+      .as("showedProducts")
+      .then((res) => {
+        return res.body.Items;
+      })
+      .should("have.length", productsAmountDisplayed);
+  }
 
+  checkAtLeastOneProductIsDisplayed(productsAmountDisplayed) {
+    return cy
+      .request(endPoints.entries)
+      .as("showedProducts")
+      .then((res) => {
+        return res.body.Items;
+      })
+      .should("have.length.at.least", productsAmountDisplayed);
+  }
 }
 export default HomePage;

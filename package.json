@@ -4,31 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress open",
-    "cypress:open": "cypress open"
+    "test": "npx cypress open"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Automation",
+    "JavaScript",
+    "Cypress",
+    "Cucumber"
+  ],
+  "author": "anagarcia791",
   "license": "ISC",
   "devDependencies": {
-    "@shelex/cypress-allure-plugin": "^2.28.0",
     "cypress": "^9.7.0",
     "cypress-cucumber-preprocessor": "^4.3.1"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true,
-    "cucumberJson": {
-      "generate": true,
-      "outputFolder": "cucumber_report",
-      "filePrefix": "",
-      "fileSuffix": ".cucumber"
-    }
-  },
-  "dependencies": {
-    "@uirouter/cypress-runner": "^2.0.0",
-    "cypress-cucumber-preprocessor": "^4.3.1",
-    "cucumber-html-reporter": "^5.5.0",
-    "cypress-multi-reporters": "^1.6.1",
-    "multiple-cucumber-html-reporter": "^1.21.4"
+    "nonGlobalStepDefinitions": true
   }
 }
